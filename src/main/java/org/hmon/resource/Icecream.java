@@ -1,4 +1,4 @@
-package org.hmon.A012;
+package org.hmon.resource;
 
 public enum Icecream {
     BLUEBERRY("blue berry", 15),

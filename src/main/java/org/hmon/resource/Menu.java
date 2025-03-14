@@ -1,4 +1,4 @@
-package org.hmon.A012;
+package org.hmon.resource;
 
 import java.util.Scanner;
 
