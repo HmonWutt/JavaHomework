@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DiceGame21 {
-
-    private ArrayList<Player> players = new ArrayList<>();
     private final Scanner scanner;
     public DiceGame21(Scanner scanner) {
         this.scanner = scanner;
@@ -14,42 +12,33 @@ public class DiceGame21 {
     public void run(){
         String name = "Marvin";
         name = askName();
-        Player player = new Player(name, scanner);
-        this.players.add(player);
+        Player human = new Player(name, scanner);
         Player marvin = new Player("Marvin", scanner);
-        this.players.add(marvin);
-        startGame();
+        decideWinner(human,marvin);
     }
 
-    private void startGame(){
+    private void decideWinner(Player human, Player robot) {
         Dice die = new Dice(6);
-        if (!players.isEmpty()) {
-            Player human = players.get(0);
-            Player marvin = players.get(1);
-            human.play(scanner, die);
-            if (human.isLost()) {
-                System.out.printf("You rolled a %d, %s won by default.\n", human.getPoints(), marvin.getName());
+        human.play(scanner, die);
+        int humanPoints = human.getPoints();
+        if (humanPoints > 21) {
+            System.out.printf("Womp, womp!You rolled a %d, %s won by default.\n", humanPoints, robot.getName());
+        } else if (humanPoints == 21) {
+            System.out.println(System.out.printf("You rolled a 21. You won with!"));
+        }
+         else {
+                robot.play(die);
+                int robotPoints = robot.getPoints();
+                if (robotPoints > 21) System.out.println("robot lost. You win");
+                else if (robotPoints >= humanPoints) {
+                    System.out.printf("%s won with %d points.\n", robot.getName(), robotPoints);
+                    System.out.printf("You lost with %d points.\n", humanPoints);
+                } else {
+                    System.out.printf("You win with %d points.\n", humanPoints);
+                    System.out.printf("%s lost with %d points.\n", robot.getName(), robotPoints);
+                }
             }
-            else {
-                marvin.play(die);
-                declareWinner(human,marvin);
-            }
         }
-    }
-
-    private void declareWinner(Player human, Player robot){
-        if (robot.getPoints() >= 21) {
-            System.out.printf("%s has won with %d points.\n", human.getName(),human.getPoints());
-            System.out.printf("%s has lost with %d points.\n",robot.getName(),robot.getPoints());
-        }
-        else if (robot.getPoints() == human.getPoints()){
-            System.out.printf("You lost!%s won!\n",robot.getName());
-        }
-        else {
-            System.out.printf("%s has won with %d points.\n", robot.getName(), robot.getPoints());
-            System.out.printf("%s has lost with %d points.\n", human.getName(), human.getPoints());
-        }
-    }
 
     private String askName(){
         String name = "";
