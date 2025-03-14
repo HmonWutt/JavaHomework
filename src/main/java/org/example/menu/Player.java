@@ -6,12 +6,10 @@ import java.util.Scanner;
 
 public class Player{
     private final String name;
-    private final boolean isHuman;
     private int points = 0;
     private boolean isLost;
-    public Player(String name, boolean isHuman, Scanner scanner){
+    public Player(String name, Scanner scanner){
         this.name = name;
-        this.isHuman = isHuman;
     }
     public void play(Scanner scanner, Dice die) {
             if (scanner != null) {

@@ -15,9 +15,9 @@ public class DiceGame21 {
     public void run(){
         String name = "Marvin";
         name = askName();
-        Player player = new Player(name, true, scanner);
+        Player player = new Player(name, scanner);
         this.players.add(player);
-        Player marvin = new Player("Marvin", false, scanner);
+        Player marvin = new Player("Marvin", scanner);
         this.players.add(marvin);
         startGame();
     }
