@@ -46,6 +46,9 @@ public class Menu {
             case "M":
                 printMenu();
                 break;
+            case "q":
+            case "Q":
+                return;
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
