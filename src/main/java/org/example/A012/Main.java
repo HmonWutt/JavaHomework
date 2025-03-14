@@ -1,6 +1,6 @@
 package org.example.dice;
 
-import org.example.menu.Dice;
+import org.example.A011.Dice;
 
 import java.util.Objects;
 import java.util.Scanner;
