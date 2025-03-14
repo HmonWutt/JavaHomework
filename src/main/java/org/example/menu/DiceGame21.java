@@ -1,7 +1,6 @@
 package org.example.menu;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class DiceGame21 {
