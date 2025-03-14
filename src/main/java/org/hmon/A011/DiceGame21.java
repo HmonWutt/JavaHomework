@@ -12,8 +12,8 @@ public class DiceGame21 {
     public void run(){
         String name = "Marvin";
         name = askName();
-        Player human = new Player(name, scanner);
-        Player marvin = new Player("Marvin", scanner);
+        Player human = new Player(name);
+        Player marvin = new Player("Marvin");
         decideWinner(human,marvin);
     }
 

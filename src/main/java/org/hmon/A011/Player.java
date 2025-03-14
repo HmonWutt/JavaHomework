@@ -7,18 +7,11 @@ import java.util.Scanner;
 public class Player{
     private final String name;
     private int points = 0;
-    private boolean isLost;
-    public Player(String name, Scanner scanner){
+    public Player(String name){
         this.name = name;
     }
     public void play(Scanner scanner, Dice die) {
-            if (scanner != null) {
-                //System.out.println("Press 1 to choose to roll dices one by one.\nPress 2 to roll all dices at once.");
-                //String strategy = scanner.next();
-                //if (Objects.equals(strategy, "1")) {
-                    rollOneByOne(die, scanner);
-               // } else rollAllAtOnce(die);
-            }
+            if (scanner != null) rollOneByOne(die, scanner);
     }
     public void play(Dice die){
         System.out.printf("%s is playing....\n",name);
@@ -59,10 +52,6 @@ public class Player{
             die.roll();
             points += die.getValue();
         }
-        if (points >=21) isLost = true;
-    }
-    public boolean isLost() {
-        return isLost;
     }
 
     public String getName() {
