@@ -1,4 +1,4 @@
-package org.example.menu;
+package org.example.A011;
 
 import java.util.ArrayList;
 import java.util.Scanner;

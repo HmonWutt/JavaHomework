@@ -1,4 +1,4 @@
-package org.example.menu;
+package org.example.A011;
 
 public class Main {
     public static void main(String[] args){
