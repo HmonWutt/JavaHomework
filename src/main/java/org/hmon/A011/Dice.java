@@ -1,4 +1,4 @@
-package org.example.A011;
+package org.hmon.A011;
 import java.util.Random;
 
 public class Dice {

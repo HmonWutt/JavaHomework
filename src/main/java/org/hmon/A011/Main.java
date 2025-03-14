@@ -1,4 +1,4 @@
-package org.example.A011;
+package org.hmon.A011;
 
 public class Main {
     public static void main(String[] args){

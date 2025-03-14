@@ -1,6 +1,6 @@
-package org.example.dice;
+package org.hmon.A012;
 
-import org.example.A011.Dice;
+import org.hmon.A011.Dice;
 
 import java.util.Objects;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package org.example.Vehicle;
+package org.hmon.Vehicle;
 
 public class Main {
     public static void main(String[] args){

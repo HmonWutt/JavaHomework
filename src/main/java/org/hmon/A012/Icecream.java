@@ -1,4 +1,4 @@
-package org.example.dice;
+package org.hmon.A012;
 
 public enum Icecream {
     BLUEBERRY("blue berry", 15),

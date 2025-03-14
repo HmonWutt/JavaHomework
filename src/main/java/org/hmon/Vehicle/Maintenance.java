@@ -1,4 +1,4 @@
-package org.example.Vehicle;
+package org.hmon.Vehicle;
 
 public class Maintenance {
     private String lastServiceDate ;
