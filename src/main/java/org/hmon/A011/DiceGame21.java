@@ -53,13 +53,18 @@ public class DiceGame21 {
 
     public static void main(String[] args) {
         final Scanner scanner  = new Scanner(System.in);
-        String newGame = "y";
+        String newGame = "";
         do {
-            DiceGame21 game = new DiceGame21(scanner);
-            game.run();
-            System.out.println("Play a new game?");
+            System.out.print("Do you want to play? (y/n): ");
             newGame = scanner.next();
-        } while (!newGame.equals("n"));
-    }
 
+            if (newGame.equalsIgnoreCase("y")) {
+                DiceGame21 game = new DiceGame21(scanner);
+                game.run();
+            }
+        } while (!newGame.equalsIgnoreCase("n"));
+
+        System.out.println("Game over. Thanks for playing!");
+        scanner.close();
+    }
 }
