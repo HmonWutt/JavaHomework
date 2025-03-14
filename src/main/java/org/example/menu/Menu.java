@@ -9,6 +9,7 @@ public class Menu {
     }
     public void run(){
         String choice = "";
+        printMenu();
         do {
             choice = getChoice();
             implementChoice(choice);
@@ -39,7 +40,7 @@ public class Menu {
                 Time.print();
                 break;
             case "3":
-                System.out.println("3");
+                DiceGame21.main(new String[]{});
                 break;
             case "m":
             case "M":
