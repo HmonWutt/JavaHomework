@@ -12,8 +12,8 @@ public class Time {
         String formattedTime = now.format(formatter) ;
         System.out.println("Formatted time: "+formattedTime);
     }
-    public static int getDay(){
-        return LocalDateTime.now().getDayOfMonth();
+    public static String getDate(){
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
     }
     public static String getMonth(){
