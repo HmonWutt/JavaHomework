@@ -1,6 +1,5 @@
-package org.hmon.A011;
+package org.hmon.diceGame;
 
-import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 

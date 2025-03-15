@@ -1,6 +1,5 @@
-package org.hmon.A011;
+package org.hmon.diceGame;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class DiceGame21 {

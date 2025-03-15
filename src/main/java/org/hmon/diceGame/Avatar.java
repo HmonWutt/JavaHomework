@@ -1,4 +1,4 @@
-package org.hmon.A011;
+package org.hmon.diceGame;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

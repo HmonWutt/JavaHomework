@@ -1,6 +1,4 @@
-package org.hmon.A011;
-
-import org.hmon.resource.MenuTwo;
+package org.hmon.diceGame;
 
 import java.util.Scanner;
 

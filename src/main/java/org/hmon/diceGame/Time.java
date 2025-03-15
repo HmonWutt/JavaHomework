@@ -1,4 +1,4 @@
-package org.hmon.A011;
+package org.hmon.diceGame;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
