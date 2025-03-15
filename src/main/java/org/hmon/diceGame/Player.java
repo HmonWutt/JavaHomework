@@ -1,26 +1,16 @@
-package org.example.menu;
+package org.hmon.diceGame;
 
-import java.util.Objects;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Player{
     private final String name;
-    private final boolean isHuman;
     private int points = 0;
-    private boolean isLost;
-    public Player(String name, boolean isHuman, Scanner scanner){
+    public Player(String name){
         this.name = name;
-        this.isHuman = isHuman;
     }
     public void play(Scanner scanner, Dice die) {
-            if (scanner != null) {
-                System.out.println("Press 1 to choose to roll dices one by one.\nPress 2 to roll all dices at once.");
-                String strategy = scanner.next();
-                if (Objects.equals(strategy, "1")) {
-                    rollOneByOne(die, scanner);
-                } else rollAllAtOnce(die);
-            }
+            if (scanner != null) rollOneByOne(die, scanner);
     }
     public void play(Dice die){
         System.out.printf("%s is playing....\n",name);
@@ -42,34 +32,25 @@ public class Player{
             die.roll();
             int face = die.getValue();
             points += face;
+            System.out.printf("Round %d, %s's total points: %d\n", count+1,name,points);
             count ++;
-            System.out.printf("%s's total points: %d\n", name,points);
         }
-        while (count < 6 && !isRollAgain.equals("n") && points < 21);
-        if (points >= 21) {
-            System.out.println("Womp, womp! You lost!");
-            isLost = true;
-        }
+        while (count < 5 && !isRollAgain.equals("n") && points < 21);
     }
     private void rollOneByOne(Dice die){
         int count = 0;
-        while (count <6 && points <=15){
+        while (count <5 && points <=17){
             die.roll();
             int face = die.getValue();
             points+=face;
             count++;
         }
     }
-
     private void rollAllAtOnce(Dice die){
         for (int i =0; i < 6; i++) {
             die.roll();
             points += die.getValue();
         }
-        if (points >=21) isLost = true;
-    }
-    public boolean isLost() {
-        return isLost;
     }
 
     public String getName() {

@@ -1,4 +1,4 @@
-package org.example.menu;
+package org.hmon.diceGame;
 import java.util.Random;
 
 public class Dice {
