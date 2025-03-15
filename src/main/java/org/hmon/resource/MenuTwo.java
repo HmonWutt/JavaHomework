@@ -2,10 +2,10 @@ package org.hmon.resource;
 
 import java.util.Scanner;
 
-public class Menu{
+public class MenuTwo {
     private Team team;
     private final Scanner scanner;
-    public Menu(Scanner scanner){
+    public MenuTwo(Scanner scanner){
         this.scanner = scanner;
     }
     public void printMenu(){
@@ -104,7 +104,7 @@ public class Menu{
     }
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
-        Menu menu = new Menu(scanner);
+        MenuTwo menu = new MenuTwo(scanner);
         menu.printMenu();
         String choice = "";
         do{

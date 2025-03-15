@@ -1,13 +1,11 @@
 package org.hmon.A011;
 
+import org.hmon.resource.MenuTwo;
+
 import java.util.Scanner;
 
 public class Menu {
-    private final Scanner scanner;
-    public Menu(){
-        this.scanner = new Scanner(System.in);
-    }
-    public void run(){
+    public static  void run(){
         String choice = "";
         printMenu();
         do {
@@ -16,7 +14,7 @@ public class Menu {
         }
         while (!choice.equals("q") && !choice.equals("Q"));
     }
-    private void printMenu(){
+    private static void printMenu(){
         System.out.println(
                 " -----------------\n" +
                 "| 1) Menu choice 1\n" +
@@ -27,11 +25,12 @@ public class Menu {
                 " -----------------\n"
         );
     }
-    private String getChoice(){
+    private static String getChoice(){
+        Scanner scanner= new Scanner(System.in);
         System.out.println("Enter your choice: ");
         return scanner.nextLine();
     }
-    private void implementChoice(String choice){
+    private static void implementChoice(String choice){
         switch (choice){
             case "1":
                 Avatar.print();
@@ -52,5 +51,10 @@ public class Menu {
             default:
                 System.out.println("Invalid choice. Please try again.");
         }
+    }
+
+    public static void main(String[] args){
+        Menu.run();
+
     }
 }

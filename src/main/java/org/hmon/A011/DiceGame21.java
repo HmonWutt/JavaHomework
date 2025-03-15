@@ -24,12 +24,12 @@ public class DiceGame21 {
         if (humanPoints > 21) {
             System.out.printf("Womp, womp!You rolled a %d, %s won by default.\n", humanPoints, robot.getName());
         } else if (humanPoints == 21) {
-            System.out.println(System.out.printf("You rolled a 21. You won with!"));
+            System.out.println("You rolled a 21. You won!");
         }
          else {
                 robot.play(die);
                 int robotPoints = robot.getPoints();
-                if (robotPoints > 21) System.out.println("robot lost. You win");
+                if (robotPoints > 21) System.out.printf("%s got %d and lost. You won",robot.getName(),robotPoints);
                 else if (robotPoints >= humanPoints) {
                     System.out.printf("%s won with %d points.\n", robot.getName(), robotPoints);
                     System.out.printf("You lost with %d points.\n", humanPoints);
@@ -65,6 +65,5 @@ public class DiceGame21 {
         } while (!newGame.equalsIgnoreCase("n"));
 
         System.out.println("Game over. Thanks for playing!");
-        scanner.close();
     }
 }
