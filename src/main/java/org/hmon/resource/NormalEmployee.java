@@ -5,7 +5,11 @@ public class NormalEmployee extends Employee{
         super(name,work,salary);
     }
     @Override
+    public String toString(){
+        return String.format("Emp: %s",super.toString());
+    }
+    @Override
     public String work(){
-        return "normal employee Overrides employes work()";
+        return String.format("Emp: %s",super.work());
     }
 }

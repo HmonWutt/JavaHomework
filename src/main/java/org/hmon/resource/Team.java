@@ -5,15 +5,24 @@ import java.util.ArrayList;
 public class Team {
     private ArrayList<Employee> member = new ArrayList<>();
     public void add (Employee employee){
-        System.out.println("add employee: "+employee.toString());
+        member.add(employee);
     }
     @Override
     public String toString(){
-        System.out.println("Overrride toString");
-        return "Override toString";
+        StringBuilder finalString = new StringBuilder();
+        finalString.append("#TEAM: \n");
+        for (Employee each: member) {
+            String eachEmployee = String.format("%s\n", each.toString());
+            finalString.append(eachEmployee);
+        }
+        return finalString.toString();
     }
-    public void work(){
-        System.out.println("team work");
+    public String work(){
+        StringBuilder working = new StringBuilder();
+        for (Employee each: member){
+            working.append(each.work());
+        }
+        return working.toString();
     }
 
 }

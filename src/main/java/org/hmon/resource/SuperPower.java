@@ -8,10 +8,14 @@ public class SuperPower {
         this.description = description;
     }
     public String usePower(){
-        return "Use power";
+        return String.format("%s - %s\n",this.getType(),this.getDescription());
     }
 
     public String getType() {
         return type;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

@@ -11,9 +11,10 @@ public class Employee {
     }
     @Override
     public String toString(){
-        return "Override to string Employee";
+        return String.format("%s (%s)",name,work);
     }
     public String work(){
-        return "Employee work";
+        return String.format("%s is working on a report in %s.\n",name,work);
     }
+
 }
