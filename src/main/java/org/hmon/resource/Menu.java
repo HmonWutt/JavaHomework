@@ -89,6 +89,7 @@ public class Menu{
                 System.out.println(team.toString());;
                 break;
             case "7":
+                System.out.println(team.salaryReport());
                 break;
             case "m":
             case "M":
