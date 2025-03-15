@@ -16,8 +16,8 @@ public class Time {
         return LocalDateTime.now().getDayOfMonth();
 
     }
-    public static int getMonth(){
-        return LocalDateTime.now().getMonthValue();
+    public static String getMonth(){
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("MMMM"));
     }
     public static int getYear(){
         return LocalDateTime.now().getYear();
